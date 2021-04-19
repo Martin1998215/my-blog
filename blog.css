@@ -8,6 +8,7 @@ body {
   flex-wrap: wrap;
   justify-content: center;
   margin-top: 20px;
+  background: gray;
 }
 .container {
 flex: 0 0 50%;
@@ -26,8 +27,8 @@ background: lightgray;
 }
 
 .maltin {
-  width: 80px;
-  height: 80px;
+  width: 100px;
+  height: 100px;
   margin: 7px;
   border-radius: 60%;
 }
@@ -39,19 +40,25 @@ background: lightgray;
 }
 .details {
   margin: 7px;
+  display: flex;
   flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-between;
 font-family: monospace;
-font-size: 12px;
+font-size: 18px;
   padding: 0px 5px 4px 3px;
 }
+
 .inner {
   display: flex;
   flex-wrap: wrap;
-  width: 90%;
-  padding: 15px 12px 20px 7px;
+  flex-direction: column;
+  width: 100%;
+  padding: 15px 0;
   color: black;
+  background: lightgray;
   font-size: 15px;
-  margin: 12px auto 10px 0;
+  margin: 10px 0;
 }
 .intro {
   width: 60%;
@@ -60,6 +67,18 @@ font-size: 12px;
   flex-wrap: wrap;
   flex-direction: column;
   align-items: center;
+}
+.header {
+  display: none;
+  width: 60%;
+  margin: 10px auto;
+  background: white;
+  box-shadow: 0px 0px 6px gray;
+}
+.header h3 {
+  padding: 5px 10px;
+  text-align: center;
+  color: #26dcff;
 }
 .text {
   text-align: center;
@@ -82,6 +101,20 @@ h2 {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  border-top: 1px solid black;
+  margin: 10px 0;
+  padding: 15px 0;
+}
+.footer {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  margin: 15px 0;
+  align-items: center;
+}
+.footer h5 {
+  padding: 5px 0;
 }
 .button {
   margin-bottom: 14px;
@@ -112,14 +145,20 @@ h2 {
   box-shadow: none;
 }
 #p1 {
-  background: white;
-  padding: 10px;
-  margin: 15px 0 15px 0;
+  padding: 10px 5%;
+  margin: 15px auto;
   width: 100%;
+  background: white;
+  border-top: 0.3px solid gray;
+  border-bottom: 0.3px solid gray;
 }
 .p1 {
-  padding: 10px;
+  padding: 10px 5%;
   width: 100%;
+  margin: 15px auto;
+  background: white;
+  border-top: 0.3px solid gray;
+  border-bottom: 0.3px solid gray;
 }
 .search {
   width: 98%;
@@ -134,7 +173,7 @@ padding: 5px;
 } 
 #search {
 
-  width: 50%;
+  width: 60%;
   border: 1px solid black;
   border-radius: 10px;
   border-top-right-radius: 0;
@@ -159,15 +198,22 @@ padding: 5px;
   .container {
     flex: 0 0 100%;
   }
-  .inner {
-    width: 98%;
-    margin: 10px 1%;
-  }
   .intro {
     width: 98%;
     margin: 10px 1%;
   }
   .button, .button1 {
     width: 45%;
+  }
+  .maltin {
+    width: 70px;
+    height: 70px;
+  }
+  .details {
+    font-size: 10px;
+    height: 70px;
+  }
+  .header {
+    width: 90%;
   }
 }
